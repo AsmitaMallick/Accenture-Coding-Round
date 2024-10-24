@@ -1,34 +1,24 @@
-#include <iostream>
-#include <cmath> // for sqrt and M_PI
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
 
-// Function to calculate the number of rotations
-double calculateRotations(double x_init, double y_init, double x_final, double y_final, double radius) {
-    // Calculate the Euclidean distance between the initial and final centers
-    double distance = std::sqrt((x_final - x_init) * (x_final - x_init) + (y_final - y_init) * (y_final - y_init));
-    
-    // Calculate the circumference of the circle (2 * pi * radius)
-    double circumference = 2 * M_PI * radius;
-    
-    // Calculate the number of rotations
-    double rotations = distance / circumference;
-    
-    return rotations;
+int x, y;
+cout<<"x and y of circle";
+cin>>x>>y;
+int x1, y1;
+cout<<"point to reach";
+cin>>x1>>y1;
+
+cout<<"radius of circle";
+cout<<x;
+double l = pow(x1-x, 2)+pow(y1-y, 2);
+double distance = sqrt(l);
+
+double circum = (2*M_PI*x);
+double rotations = distance/circum;
+
+cout<<"no. of rotations"<<rotations;
+return 0;
 }
 
-int main() {
-    // Example usage
-    double x_init;
-    double y_init;
-    double x_final;
-    double y_final;
-    double radius;  // Example radius
-
-    cin>>x_init>>y_init;
-    cin>>x_final>>y_final;
-    cin>>radius;
-    
-    double rotations = calculateRotations(x_init, y_init, x_final, y_final, radius);
-    std::cout << "Number of rotations: " << rotations << std::endl;
-    
-    return 0;
-}
+// in the question, radius is not given as the input, x coordinate will be the radius
