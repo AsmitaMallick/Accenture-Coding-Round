@@ -1,22 +1,18 @@
-// C++ code to implement above approach
-#include <bits/stdc++.h>
+//my approach
+
+#include<bits/stdc++.h>
 using namespace std;
+int main(){
+	int n;
+	cin>>n;
 
-// Divide number into 2 even parts
-bool divNum(int n)
-{
-	return (n <= 2
-				? false
-				: (n % 2 == 0
-					? true
-					: false));
-}
-
-// Driven Program
-int main()
-{
-	int n = 8;
-	cout << (divNum(n) ? "YES" : "NO")
-		<< endl;
+	if(n%2 == 0 && n>=6) //coz n should be even and at least 6 (2 + 4) are the smallest distinct even numbers.
+	cout<<"YES";
+	else
+	cout<<"NO";
 	return 0;
 }
+
+
+
+// ty sir for posting all coding questions!
